@@ -20,17 +20,33 @@ Explanation: 2-2 = 1/22 = 1/4 = 0.25
  */
 package leetcodepow;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  *
  * @author milton
  */
-public class LeetCodePow {
- public double pow(double x, int n) {
-        if(n==0) return 1.0;
-        double half=pow(x,n/2);
-        if(n%2==0) return half*half;
-        else if(n>0) return half*half*x;
-        else return half*half/x;
+public class RepeatingCharacters {
+
+    public static void main(String[] args) {
+        String str = getUniqueCharacterSubstring("abcabcbb");
+        System.err.println(str.length());
     }
     
+    public static String getUniqueCharacterSubstring(String input) {
+	    Map<Character, Integer> visited = new HashMap<>();
+	    String output = "";
+	    for (int start = 0, end = 0; end < input.length(); end++) {
+	        char currChar = input.charAt(end);
+	        if (visited.containsKey(currChar)) {
+	            start = Math.max(visited.get(currChar)+1, start);
+	        }
+	        if (output.length() < end - start + 1) {
+	            output = input.substring(start, end + 1);
+	        }
+	        visited.put(currChar, end);
+	    }
+	    return output;
+	}
 }
