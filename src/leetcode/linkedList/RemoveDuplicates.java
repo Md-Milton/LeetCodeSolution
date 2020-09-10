@@ -18,21 +18,26 @@ package leetcode.linkedList;
  *
  * @author milton
  */
-/*
-class Node{
-private int data;
-private Node next;
-public Node(int d,Node n){
-this.data = d;
-this.next = n;
-}
-public Node(int d){
-this.data = d;
-}
 
-*/
+
+
 
 public class RemoveDuplicates {
+    class Node {
+
+    private int data;
+    private Node next;
+
+    public Node(int d, Node n) {
+        this.data = d;
+        this.next = n;
+    }
+
+    public Node(int d) {
+        this.data = d;
+
+    }
+}
 public Node removeDuplicates(Node head){
     Node curr = head;
     while(curr!=null){      //don't traverse using head as it may lose nodes rather use another head reference like here curr
