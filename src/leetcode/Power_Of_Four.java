@@ -23,6 +23,10 @@ public class Power_Of_Four {
        public boolean isPowerOfFour(int num) {
         if(num==0)
             return false;
+        /*  same solution could be apply for power of two and power of three 
+            but in power of three the pow value should be rounded to long
+            like--->  long pow = Math.round(Math.log(n)/Math.log(3));
+        */
         int pow = (int)(Math.log(num)/Math.log(4));
         if(num == Math.pow(4,pow))
             return true;
