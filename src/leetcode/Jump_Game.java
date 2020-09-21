@@ -22,7 +22,10 @@ package leetcode;
  */
 public class Jump_Game {
      public boolean canJump(int[] nums) {
-        int start = nums[0];
+       
+         if(nums.length==1)
+             return true;
+         int start = nums[0];
         
         for(int i=0;i<nums.length;i++){
             if(start<i && nums[i]==0)
