@@ -7,7 +7,9 @@ Y   I   R
 
 And then read line by line: "PAHNAPLSIIGYIR"
  */
-package leetcode;
+package string;
+
+import leetcode.*;
 
 /**
  *

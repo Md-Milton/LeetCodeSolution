@@ -39,21 +39,5 @@ public class DetectPattern {
         for(int k=0;k<j;k++){
             System.out.print(nums[k]+" ");
         }
-       /* int ar[] = {1,2,4,4,4,4};
-        int len = ar.length;
-        int m = 1;
-        int k = 3;
-        boolean valid = true;
-        for (int i = 0; i + m * k <= len; ++i) {
-      for (int j = 1; j < k && valid; ++j)
-        for (int p = 0; p < m && valid; ++p)
-          if (ar[i + j * m + p] != ar[i + p])
-            valid = false;
-    }
-      if (valid)
-                System.err.println("true");
-      else
-        System.err.println("false");
-*/
     }
 }

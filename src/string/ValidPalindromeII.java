@@ -13,7 +13,9 @@ Output: True
 Explanation: You could delete the character 'c'.
 
  */
-package leetcode;
+package string;
+
+import leetcode.*;
 
 /**
  *
@@ -21,14 +23,14 @@ package leetcode;
  */
 public class ValidPalindromeII {
     public boolean validPalindrome(String s) {
-        int l=0;
-        int r = s.length()-1;
-        while(l<r){
-            if(s.charAt(l)!=s.charAt(r))
-                return valid(s,l,r-1)||valid(s,l+1,r);//either left,right-1 or left+1,right is valid 
+        int start=0;
+        int end = s.length()-1;
+        while(start<end){
+            if(s.charAt(start)!=s.charAt(end))
+                return valid(s,start,end-1)||valid(s,start+1,end);//either left,right-1 or left+1,right is valid 
                 
-                l++;
-                r--;
+                start++;
+                end--;
         }
         return true;
     }

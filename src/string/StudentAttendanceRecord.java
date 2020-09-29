@@ -15,7 +15,9 @@ Input: "PPALLP"
 Output: True
 
  */
-package leetcode;
+package string;
+
+import leetcode.*;
 
 /**
  *

@@ -3,17 +3,20 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package leetcodepow;
+package string;
+
+import leetcode.*;
 
 /**
  *
  * @author milton
  */
 public class PalindromeString {
-        public String longestPalindrom(String input){
-     
-     if(input==null && input.length()<2)
-         return input;
+    public static void main(String args[]){
+     String input = "babad";
+
+    
+        
      
      String longest = input.substring(0,1);
      
@@ -26,10 +29,9 @@ public class PalindromeString {
             longest = temp; 
         
      }
-        return longest;
-    }
+        System.err.println(longest+" "+longest.length());
 }
-    public String check(String s,int begin,int end){
+    public static String check(String s,int begin,int end){
        while(begin>=0&&end<=s.length()-1 && s.charAt(begin)==s.charAt(end)){
            begin--;
            end++;
